@@ -35,17 +35,25 @@
 	<body>
 		
 		<div class="container">
-			<img id="image" width="768" height="768" src="locked1text.gif" />
+			<img id="image" width="768" height="768" src="locked1text2.gif" />
 			<input class="inputBox" type="text" id="textInput">
 			<!--<button class="hiddenButton" onclick="window.location.href='green_squiggle4.html';"> </button>-->
 		</div>
 		
 		
 		<script>
+		
+			if (Math.random() < 0.25) {
+				document.getElementById('image').src = "locked1text.gif";
+			}
+		
 			document.getElementById('textInput').addEventListener('input', function () {
 			  var inputValue = this.value.trim().toUpperCase();
+			  if (inputValue === 'GENESIS') {
+				window.location.href = 'greenStory.html';
+			  }
 			  if (inputValue === 'AZHZCOC') {
-				window.location.href = 'genesis.html'; // Replace with the desired URL
+				window.location.href = 'greenStoryAlt.html';
 			  }
 			});
 		</script>

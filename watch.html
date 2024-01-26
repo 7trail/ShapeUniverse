@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis of Alternative Outcomes</title>
+	<link rel="stylesheet" href="main.css">
+    <style>
+        body {
+			color:white;
+			font-family: "Comic Sans MS", cursive, sans-serif;
+			background-color: #111111;
+		}
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+		
+		.left {
+			padding-left:50px;
+			padding-right:50px;
+			text-align: left;
+		}
+		
+		.right {
+			padding-left:50px;
+			padding-right:50px;
+			text-align: right;
+			justify-content: flex-end
+		}
+		
+		.flex {
+			display:flex;
+			
+		}
+    </style>
+</head>
+<body>
+    <h1 class="randomColorText">Analysis of Alternative Outcomes</h1>
+	<div class="left flex">
+		<img src="watch1.gif" style="border: solid 3px white;" width="480" height="360"/>
+		<div style="padding:20px;">
+			<h2 style="color:yellow;">Alternative Outcome A</h2>
+			<p>Although her history is closely aligned to mine, she suffered an early death from a religious uprising. Her followers were driven into the ground, and little remains of the progress she made.</p>
+			<p>Ineligible for substitution.</p>
+		</div>
+	</div>
+	
+	<div class="right flex">
+		<div style="padding:20px;">
+			<h2 style="color:blue;">Alternative Outcome B</h2>
+			<p>Her history is nearly identical to mine. She maintains strong and consistent power and divinity, and remains in good health.</p>
+			<p>Eligible for substitution.</p>
+		</div>
+		<img src="watch2.gif" style="border: solid 3px white;" width="480" height="360"/>
+	</div>
+	
+	<script>
+	  function getRandomColor() {
+		const letters = '0123456789ABCDEF';
+		let color = '#';
+		for (let i = 0; i < 6; i++) {
+		  color += letters[Math.floor(Math.random() * 16)];
+		}
+		return color;
+	  }
+
+	  function randomizeColors() {
+		const elements = document.querySelectorAll('.randomColorText');
+
+		elements.forEach(h1Element => {
+		  const textContent = h1Element.textContent;
+
+		  // Wrap each letter in a span with a random color
+		  const coloredText = textContent.split('').map(letter => {
+			const randomColor = getRandomColor();
+			return `<span style="color: ${randomColor};">${letter}</span>`;
+		  }).join('');
+
+		  // Update the element with the new colored text
+		  h1Element.innerHTML = coloredText;
+		});
+	  }
+	  randomizeColors();
+	  setInterval(randomizeColors, 200);
+	</script>
+</body>
+</html>
