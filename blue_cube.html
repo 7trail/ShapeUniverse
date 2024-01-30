@@ -77,7 +77,7 @@
 </head>
 <body>
 <div style="text-align:center;">
-	<h1 style="color:white;">WELCOME TO THE SHAPE UNIVERSE</h1>
+	<h1 style="color:white;">CUBE CHAT</h1>
 	<a href="index.html"><img src="ring.gif" width="640" height="120"/></a>
 </div>
 <div id="chat-container">
@@ -152,6 +152,16 @@
 	  return color;
 	}
 	
+	function sendMessages(arr) {
+		for (let i = 0; i < arr.length; i++) {
+			setTimeout(function () {
+                displayResponseMessage(arr[i]);
+            }, (i+1)*1000);
+		}
+	}
+	
+	var value = 0;
+	
     function sendMessage() {
         var userInput = document.getElementById("user-input").value;
 		if (userInput.trim() == "") {
@@ -166,6 +176,57 @@
                 displayResponseMessage(item);
             }, 1000);
         }
+		
+		if (readCookie("outcome") == "release") {
+			return;
+		}
+		
+		if (userInput.toLowerCase().includes("lia")) {
+			let messages=["i need your help","- - 3 4","uncover the code, find me","i have something special if you can recite it"];
+			sendMessages(messages);
+		}
+		
+		if (userInput.toLowerCase().includes("more")) {
+			let messages=["oh, you want more?","i trust you, i can tell you this finally","two partners, two keys, one god, one message","HETTOASEDENEEEOHRIGR,ENFDTEHNSAELW"];
+			sendMessages(messages);
+		}
+		
+		if (value == 0 && userInput.toLowerCase().includes("yellow")) {
+			setTimeout(function () {
+				displayResponseMessage("1/4. then what?");
+			}, 1000);
+			value = 1;
+		}
+		else if (value == 1 && userInput.toLowerCase().includes("blue")) {
+			setTimeout(function () {
+				displayResponseMessage("2/4. next?");
+			}, 1000);
+			value = 2;
+		}
+		else if (value == 2 && userInput.toLowerCase().includes("green")) {
+			setTimeout(function () {
+				displayResponseMessage("3/4. last?");
+			}, 1000);
+			value = 3;
+		}
+		else if (value == 3 && userInput.toLowerCase().includes("red")) {
+			sendMessages(["4/4","your reward:"]);
+			setTimeout(function () {
+				displayResponseMessage("iurtyaodrl","#ffff00");
+				displayResponseMessage("fcehovltie","#0000ff");
+				displayResponseMessage("yaaiuevhd.","#00ff00");
+				displayResponseMessage("ondshseed","#ff0000");
+			}, 4000);
+			setTimeout(function () {
+				sendMessages(["and","just so you know","you CAN leave me here","the option, of course, is there","please, don't"]);
+			}, 8000);
+			value = 0;
+		} else if (value > 0) {
+			value = 0;
+			setTimeout(function () {
+				displayResponseMessage("try again");
+			}, 1000);
+		}
     }
 
     function displayUserMessage(message) {
@@ -178,12 +239,15 @@
         messageList.scrollTop = messageList.scrollHeight; // Auto-scroll to the bottom
     }
 
-    function displayResponseMessage(message) {
+    function displayResponseMessage(message, color) {
         var messageList = document.getElementById("message-list");
         var li = document.createElement("li");
         li.className = "response-message";
         li.appendChild(document.createTextNode(message));
 		var clr = getRandomColor();
+		if (color) {
+			clr = color;
+		}
 		li.style.borderColor = clr;
 		li.style.color = clr;
         messageList.appendChild(li);

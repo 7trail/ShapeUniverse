@@ -30,6 +30,14 @@
 			top:600px;
 			left: 650px;
 		}
+		
+		#yourturn {
+			float:right;
+			padding-left:20px;
+			padding-right:20px;
+			padding-bottom:20px;
+			border: 3px solid white;
+		}
     </style>
 </head>
 <body>
@@ -56,9 +64,17 @@
 			<p>Speak my answer, determine your fate.</p>
 			</strong>
 		</blockquote>
+		<div id="yourturn">
+			<h2 style="color:green;">Your Turn!</h2>
+			<h3>Can you solve the riddle?</h3>
+			<div id="user-input-container">
+				<input type="text" id="user-input" onkeydown="search(this)" placeholder="Ex: A rock, a cube...">
+				<button id="send-button" onclick="sendMessage()">Send</button>
+			</div>
+		</div>
 		<br>
-		<p>A riddle! He knew this one- it was <u>r izy</u>!</p>
-		<p>Paper unfurled beside the door, awaiting an answer. He took out his pen and signed "<u>r izy</u>"...</p>
+		<p>A riddle! He knew this one- it was <u>- ---</u>!</p>
+		<p>Paper unfurled beside the door, awaiting an answer. He took out his pen and signed "<u>- ---</u>"...</p>
 		<p>...and the door opened! He was able to enter the dimly lit room.</p>
 		<p>Sitting before him was a massive pile of gems, gold, and valuable trinkets. He knew it would make him <b>rich</b> if he sold it.</p>
 		<p>"The treasure is mine! I can't wait to return to my family with it. We will live a long and prosperous life!"</p>
@@ -68,8 +84,29 @@
 		<p>As he lay waiting to run out of oxygen, he pondered the riddle. What did he get wrong?</p>
 		<p>In his last moments, he realized his fatal mistake- <u>glz rhcuzt cljnpx lrbz vzzh utoggzh oh tnhzc, glz bzty crfz tnhzc glz toxxpz urc tzrx oh...</u></p>
 		<p>...and the treasure claimed another soul.</p>
-		
     </ul>
+	
+	<script>
+	
+		function search(ele) {
+			if(event.key === 'Enter') {
+				sendMessage();     
+			}
+		}
+	
+		var success = false;
+		function sendMessage() {
+			var userInput = document.getElementById("user-input").value;
+			if (userInput.toLowerCase().includes("key") && !success) {
+				success = true;
+				var linkElement = document.createElement("a");
+				linkElement.href = "two.html";
+				linkElement.textContent = "Yippee, you did it! Here's your prize!";
+				var myDiv = document.getElementById("yourturn");
+				myDiv.appendChild(linkElement);
+			}
+		}
+	</script>
 	
 	<div class="img1" >
 		<img src="squiggle.gif" width="200" height="200"/>
