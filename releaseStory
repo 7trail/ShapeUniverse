@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aftermath</title>
+	<link rel="stylesheet" href="main.css">
+    <style>
+        body {
+			color:white;
+			font-family: "Comic Sans MS", cursive, sans-serif;
+			background-color: #111111;
+		}
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+		
+		#left {
+			padding-left:50px;
+			padding-right:50px;
+			text-align: left;
+		}
+		.img1 {
+			position: absolute;
+			top:600px;
+			left: 650px;
+		}
+    </style>
+</head>
+<body>
+    <h1 style="color:red;">"Aftermath"</h1>
+	<h2>By ???</h2>
+    <ul id="left">
+        <p><span style="color:yellow;">they came into focus during a sunset, right in a forest,
+rhona looked at archon, then all around her,
+the sky looked *just* a little different, the air a little cleaner, the grass a little longer,
+it wasn't her world, yes, but she could get used to this,</span>
+<br>
+<span style="color:blue;">her mother, on the other hand-
+she sat, weeping for her wife,
+but soon enough, weeping turned to worrying,
+will there by anywhere for us to go, any place we can live our lives in peace?,
+will she even find us? or are we on our own?
+archon had once been saved, and now- now- now-</span>
+<br>
+<span style="color:green;">HAVING TAKEN THE SPELLBOOK FROM HER BAG, SHE SCREAMED THE WORDS INSCRIBED ON THE PAGE, PUSHING EVERY OUNCE OF HER MAGIC INTO THIS ONE MOMENT.
+HER SCREAMS BOOMED IN THE SKY! TREES FLYING AWAY, STORMS COVERING THE PLANET, CRACKS IN THE VERY EARTH CASCADING ACROSS CONTINENTS, ALL IN AN INSTANT.
+THE GROUND TREMBLED AS IT SHIFTED, CRUMBLING UNDER THE WORLD'S FEET, LIKE THE PREDATOR ENGULFING ITS PREY.
+LIGHTNING STRUCK ONCE, THEN TWICE, THEN EVERYWHERE, UNTIL EVEN SHE DID NOT KNOW IF SHE WAS STILL STANDING.</span>
+<br>
+<span style="color:red;">and then it was over,
+and she found herself in a very special place, a golden place-
+there was her, and rhona, and someone that looks a lot like her,
+and lastly, before her was a very familiar angel with four wings
+<br>
+"i can't have you doing that", she said, erasing the whole incident
+<br>
+"did you need something?"
+<br>
+so they explained everything
+they told her of their life, and how they had to escape their own world, and who rhona was
+<br>
+the angel with four wings spoke again, understanding what had transpired
+<br></span>
+"you want *your* ------- back, it sounds like?"
+<br>
+archon was crying her eyes out, struggling to speak
+"that's all i want"
+<br>
+"there's something i can do", the angel said
+"it would be unwise to do it now, there is far too much danger at this time"
+"i know it hurts to have to wait, but we *will* make this right, and your family will be made whole"
+"please try and rest until then"
+<br>
+the special place began to dissolve around them...</p>
+<h1>...and they were okay.</h1>
+    </ul>
+</body>
+</html>
