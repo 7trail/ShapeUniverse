@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="mainpageimg.css">
 	<link rel="stylesheet" href="standardbg.css">
 	<script src="cookies.js" type="text/javascript"></script>
     <title>THE SHAPE UNIVERSE - BLUE CUBE</title>
@@ -79,6 +80,18 @@
 <div style="text-align:center;">
 	<h1 style="color:white;">CUBE CHAT</h1>
 	<a href="index.html"><img src="ring.gif" width="640" height="120"/></a>
+</div>
+<div class="img1" >
+	<img src="cube.gif" width="200" height="200"/>
+</div>
+<div class="img2">
+	<img src="cube.gif" width="200" height="200"/>
+</div>
+<div class="img3">
+	<img src="cube.gif" width="200" height="200"/>
+</div>
+<div class="img4">
+	<img src="cube.gif" width="200" height="200"/>
 </div>
 <div id="chat-container">
     <ul id="message-list"></ul>
@@ -168,14 +181,6 @@
 			return;
 		}
         displayUserMessage(userInput);
-		var greetList = ["hello","hi"]
-        if (greetList.includes(userInput.toLowerCase())) {
-            setTimeout(function () {
-				var replyList = ["Greetings!","Hello","hi!!!","Welcome! <3","hi", "hey!"];
-				var item = replyList[Math.floor(Math.random()*replyList.length)];
-                displayResponseMessage(item);
-            }, 1000);
-        }
 		
 		if (readCookie("outcome") == "release") {
 			return;
@@ -185,9 +190,12 @@
 			let messages=["i need your help","- - 3 4","uncover the code, find me","i have something special if you can recite it"];
 			sendMessages(messages);
 		}
-		
+		if (userInput.includes("8024") {
+			let messages=["huh? what does that mean?","i think you need to tell someone else that..."];
+			sendMessages(messages);
+		}
 		if (userInput.toLowerCase().includes("more")) {
-			let messages=["oh, you want more?","i trust you, i can tell you this finally","two partners, two keys, one god, one message","HETTOASEDENEEEOHRIGR,ENFDTEHNSAELW"];
+			let messages=["oh, you want more?","two partners, two keys, one god, one message","HETTOASEDENEEEOHRIGR,ENFDTEHNSAELW"];
 			sendMessages(messages);
 		}
 		
@@ -218,7 +226,7 @@
 				displayResponseMessage("ondshseed","#ff0000");
 			}, 4000);
 			setTimeout(function () {
-				sendMessages(["and","just so you know","you CAN leave me here","the option, of course, is there","please, don't"]);
+				sendMessages(["and","just so you know","when you get the choice, pick correctly"]);
 			}, 8000);
 			value = 0;
 		} else if (value > 0) {
@@ -244,7 +252,7 @@
         var li = document.createElement("li");
         li.className = "response-message";
         li.appendChild(document.createTextNode(message));
-		var clr = getRandomColor();
+		var clr = "cyan";//getRandomColor();
 		if (color) {
 			clr = color;
 		}

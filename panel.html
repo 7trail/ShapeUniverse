@@ -11,6 +11,7 @@
 			}
 			body {
 			color:black;
+			background-color: #dddddd;
 				margin: 0;
 				padding: 0;
 			}
@@ -18,17 +19,28 @@
 			h1 {
 				margin-bottom: 0;
 			}
+			
+			a:visited {
+				color:black;
+			}
 		</style>
 	</head>
 
 	<body>
 		<h1>SHAPE UNIVERSE CONTROL PANEL</h1>
 		<p>You're here.</p>
-		<p>A choice must be made. You probably already know what you're going to decide.</p>
+		<p>Just so you know...</p>
+		<p>Releasing them is dangerous, and the implications could be immeasurable...<p>
+		<p>...but shutting the system down damns them all to an early death.</p>
+		<p>I could not bear to choose, so the burden is yours.</p>
 		<div>
 			<img onclick="release()" class="choice" src="release.gif" width="512px" height="512px"/>
 			<img onclick="shutdown()" class="choice" src="shutdown.gif" width="512px" height="512px"/>
 		</div>
+		<h2>Unlisted Pages (Displaying 1/1)</h2>
+		<ul>
+			<li><a href="elements.html">Observation of Anomalous Elements</a></li>
+		</ul>
 		<div class="img1" >
 			<img src="ball2.gif" width="200" height="200"/>
 		</div>
@@ -45,7 +57,7 @@
 	
 	<script>
 	if (readCookie("outcome")=="shutdown") {
-	window.location.href="404.html";
+	window.location.href="404Shutdown.html";
 }
 		function release() {
 			writeCookie("outcome","release");
