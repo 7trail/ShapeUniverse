@@ -5,6 +5,28 @@
 		<link rel="stylesheet" href="mainpageimg.css">
 		<link rel="stylesheet" href="standardbg.css">
 		<title>THE SHAPE UNIVERSE - RED BALL</title>
+		<style>
+			.row {
+			  display: flex;
+			  flex-wrap: wrap;
+			  padding: 0 4px;
+			}
+
+			/* Create two equal columns that sits next to each other */
+			.column {
+			  flex: 50%;
+			  padding: 0 4px;
+			}
+
+			.column img {
+			  margin-top: 8px;
+			  vertical-align: middle;
+			}
+			
+			.button {
+				visibility: hidden;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -23,10 +45,66 @@
 			<img src="ball.gif" width="200" height="200"/>
 		</div>
 		
-		<div class="container">
-			<h2 style="color: red;"></h2>
-			<img src="race.gif" style="border: solid 3px white;" width="480" height="360"/>
-			
+		<button class="button" onclick="redirect()">TEST</button>
+		
+		<div class="row container">
+			<div class="column">
+				<img src="race.gif" onclick="click2()" style="border: solid 3px white;" width="480" height="360"/>
+				<img src="race2.gif" onclick = "click1()" style="border: solid 3px white;" width="480" height="360"/>
+			</div>
+			<div class="column">
+				<img src="race3.gif" onclick="click3()" style="border: solid 3px white;" width="480" height="360"/>
+				<img src="race4.gif" onclick="click4()" style="border: solid 3px white;" width="480" height="360"/>
+			</div>	
 		</div>
+		
+		<script>
+			var value = 1;
+			function makeVisible() {
+				document.getElementsByClassName('img1')[0].style.visibility = 'visible';
+				document.getElementsByClassName('img2')[0].style.visibility = 'visible';
+				document.getElementsByClassName('img3')[0].style.visibility = 'visible';
+				document.getElementsByClassName('img4')[0].style.visibility = 'visible';
+			}
+			function click1() {
+				if (value == 1) {
+					document.getElementsByClassName('img1')[0].style.visibility = 'hidden';
+					value++;
+				} else if (value < 5) {
+					value = 1;
+					makeVisible();
+				}
+			}
+			function click2() {
+				if (value == 2) {
+					document.getElementsByClassName('img2')[0].style.visibility = 'hidden';
+					value++;
+				} else if (value < 5) {
+					value = 1;
+					makeVisible();
+				}
+			}
+			function click3() {
+				if (value == 3) {
+					document.getElementsByClassName('img3')[0].style.visibility = 'hidden';
+					value++;
+				} else if (value < 5) {
+					value = 1;
+					makeVisible();
+				}
+			}
+			function click4() {
+				if (value == 4) {
+					document.getElementsByClassName('img4')[0].style.visibility = 'hidden';
+					value++;
+					
+					var audio = new Audio('yippee.mp3'); // replace with the path to your sound file
+					audio.play();
+				} else if (value < 5) {
+					value = 1;
+					makeVisible();
+				}
+			}
+		</script>
 	</body>
 </html>
